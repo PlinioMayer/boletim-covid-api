@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration: MyString
+  name: MyString
+  birthdadte: 2020-11-15
+  registration_date: 2020-11-15
+  health_center: one
+
+two:
+  registration: MyString
+  name: MyString
+  birthdadte: 2020-11-15
+  registration_date: 2020-11-15
+  health_center: two
