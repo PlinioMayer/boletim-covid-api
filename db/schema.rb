@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_16_024425) do
+ActiveRecord::Schema.define(version: 2020_11_26_005128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,12 +65,15 @@ ActiveRecord::Schema.define(version: 2020_11_16_024425) do
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "city_id", null: false
+    t.index ["city_id"], name: "index_health_centers_on_city_id"
   end
 
   create_table "people", force: :cascade do |t|
     t.string "cpf"
     t.string "name"
     t.string "gender"
+    t.string "race"
     t.date "birthdate"
     t.bigint "city_id", null: false
     t.bigint "case_id", null: false
@@ -113,10 +116,10 @@ ActiveRecord::Schema.define(version: 2020_11_16_024425) do
 
   create_table "tests", force: :cascade do |t|
     t.integer "result"
-    t.string "type"
     t.bigint "person_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "testtype"
     t.index ["person_id"], name: "index_tests_on_person_id"
   end
 
@@ -125,6 +128,7 @@ ActiveRecord::Schema.define(version: 2020_11_16_024425) do
   add_foreign_key "cities", "states"
   add_foreign_key "doctors", "health_centers"
   add_foreign_key "emergencial_supports", "people"
+  add_foreign_key "health_centers", "cities"
   add_foreign_key "people", "cases"
   add_foreign_key "people", "cities"
   add_foreign_key "people_risk_groups", "people"

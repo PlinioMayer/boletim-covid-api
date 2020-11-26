@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
 
-    render json: @people
+    render :json => @people.as_json(methods: [:phones_number])
   end
 
   # GET /people/1

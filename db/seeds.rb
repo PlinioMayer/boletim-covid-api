@@ -299,9 +299,6 @@ RiskGroup.create([
     name: 'DIABETICO'
   },
   {
-    name: 'OTARIO'
-  },
-  {
     name: 'IMUNODEPRESSIVO'
   },
   {
@@ -318,4 +315,298 @@ RiskGroup.create([
   }
 ])
 
+Case.create([
+  {
+    name: 'Recuperado'
+  },
+  {
+    name: 'Óbito'
+  },
+  {
+    name: 'Ativo'
+  }
+])
 
+HealthCenter.create([
+  {
+    total: 150,
+    occupied: 30,
+    address: 'SHCN, Asa Norte',
+    city_id: 27
+  },
+  {
+    total: 250,
+    occupied: 70,
+    address: 'Riacho Fundo, QN 01, Conj 32',
+    city_id: 27
+  },
+  {
+    total: 220,
+    occupied: 40,
+    address: 'SHCL, Conj E, Lote 5, Asa Sul',
+    city_id: 27
+  },
+  {
+    total: 170,
+    occupied: 80,
+    address: 'Vila Planalto Acamp Pacheco Fernandes',
+    city_id: 27
+  },
+  {
+    total: 210,
+    occupied: 80,
+    address: 'SGAS II',
+    city_id: 27
+  },
+])
+
+Person.create([
+  {
+    cpf: "6185391017",
+    name: "Jose Costa",
+    gender: "Masculino",
+    race: "Parda",
+    birthdate: "1998-04-06",
+    city_id: 27,
+    case_id: 1
+  },
+  {
+    cpf: "12345678901",
+    name: "Plínio Mayer",
+    gender: "Masculino",
+    race: "Branca",
+    birthdate: "1998-04-06",
+    city_id: 27,
+    case_id: 1
+  },
+  {
+    cpf: "098765432123",
+    name: "Andre Braga",
+    gender: "Masculino",
+    race: "Negra",
+    birthdate: "1997-12-23",
+    city_id: 27,
+    case_id: 3
+  },
+  {
+    cpf: "321654987210",
+    name: "Maria Silva",
+    gender: "Feminino",
+    race: "Branca",
+    birthdate: "2000-10-18",
+    city_id: 27,
+    case_id: 2
+  },
+  {
+    cpf: "321654987210",
+    name: "Joênia Wapichana",
+    gender: "Feminino",
+    race: "Indigena",
+    birthdate: "1982-07-13",
+    city_id: 27,
+    case_id: 3
+  },
+  {
+    cpf: "98485838401",
+    name: "Luisa Machado",
+    gender: "Feminino",
+    race: "Parda",
+    birthdate: "1988-01-28",
+    city_id: 27,
+    case_id: 3
+  },
+  {
+    cpf: "34586402623",
+    name: "Pedro dos Santos",
+    gender: "Masculino",
+    race: "Negro",
+    birthdate: "1952-07-13",
+    city_id: 27,
+    case_id: 3
+  },
+  {
+    cpf: "23459674301",
+    name: "Célia Xakriabá",
+    gender: "Feminino",
+    race: "Indigena",
+    birthdate: "1994-02-22",
+    city_id: 27,
+    case_id: 3
+  },
+  {
+    cpf: "04099523110",
+    name: "Marco Nemetala",
+    gender: "Masculino",
+    race: "Branco",
+    birthdate: "1999-12-18",
+    city_id: 27,
+    case_id: 3
+  }
+])
+
+PeopleRiskGroup.create([
+  {
+    person_id: 3,
+    risk_group_id: 3
+  },
+  {
+    person_id: 3,
+    risk_group_id: 4
+  },
+  {
+    person_id: 4,
+    risk_group_id: 10
+  },
+  {
+    person_id: 4,
+    risk_group_id: 5
+  },
+  {
+    person_id: 2,
+    risk_group_id: 4
+  },
+  {
+    person_id: 7,
+    risk_group_id: 1
+  },
+])
+
+Bed.create([
+  {
+    person_id: 3,
+    health_center_id: 1
+  },
+  {
+    person_id: 5,
+    health_center_id: 1
+  },
+  {
+    person_id: 6,
+    health_center_id: 2
+  },
+  {
+    person_id: 7,
+    health_center_id: 2
+  },
+  {
+    person_id: 8,
+    health_center_id: 2
+  }
+])
+
+Doctor.create([
+  {
+    registration: "1234",
+    name: "Antonio Garcia",
+    birthdadte: "1970-12-03",
+    registration_date: "2019-03-04",
+    health_center_id: 1
+  },
+  {
+    registration: "4321",
+    name: "Bruno Barbosa",
+    birthdadte: "1972-03-21",
+    registration_date: "2018-02-10",
+    health_center_id: 1
+  },
+  {
+    registration: "2413",
+    name: "Linda Alves",
+    birthdadte: "1958-10-23",
+    registration_date: "2020-01-04",
+    health_center_id: 2
+  },
+  {
+    registration: "1423",
+    name: "Liandre Andrade",
+    birthdadte: "1992-02-12",
+    registration_date: "2016-07-24",
+    health_center_id: 2
+  },
+  {
+    registration: "3214",
+    name: "Pedro Leão",
+    birthdadte: "1983-01-02",
+    registration_date: "2016-12-24",
+    health_center_id: 2
+  },
+])
+
+EmergencialSupport.create([
+  {
+    value: 600,
+    date: "2020-05-10",
+    person_id: 1
+  },
+  {
+    value: 600,
+    date: "2020-06-10",
+    person_id: 1
+  },
+  {
+    value: 600,
+    date: "2020-07-10",
+    person_id: 1
+  },
+  {
+    value: 600,
+    date: "2020-05-10",
+    person_id: 2
+  },
+  {
+    value: 600,
+    date: "2020-06-10",
+    person_id: 2
+  },
+])
+
+Phone.create([
+  {
+    number: "98982303109",
+    person_id: 1
+  },
+  {
+    number: "61983758763",
+    person_id: 2
+  },
+  {
+    number: "61981177718",
+    person_id: 9
+  },
+  {
+    number: "6140031515",
+    person_id: 9
+  },
+  {
+    number: "6161981512375",
+    person_id: 2
+  },
+])
+
+Test.create([
+  {
+    result: 0,
+    testtype:"RT-PCR",
+    person_id: 1
+  },
+  {
+    result: 0,
+    testtype:"Sorologia",
+    person_id: 2
+  },
+  {
+    result: 1,
+    testtype:"RT-PCR",
+    person_id: 3
+  },
+  {
+    result: 1,
+    testtype:"Teste rápido",
+    person_id: 1
+  },
+  {
+    result: 1,
+    testtype:"Sorologia",
+    person_id: 2
+  },
+])
