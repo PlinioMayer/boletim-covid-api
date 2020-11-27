@@ -5,7 +5,7 @@ class HealthCentersController < ApplicationController
   def index
     @health_centers = HealthCenter.all
 
-    render json: @health_centers
+    render json: @health_centers.as_json(methods: [:city_name])
   end
 
   # GET /health_centers/1
@@ -46,6 +46,6 @@ class HealthCentersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def health_center_params
-      params.require(:health_center).permit(:total, :occupied, :address)
+      params.require(:health_center).permit(:total, :occupied, :address, :city_id, :name)
     end
 end

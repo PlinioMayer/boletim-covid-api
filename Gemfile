@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+gem "scenic"
+
+gem 'rack-cors'
+
 # Use dotenv to load environment variables
 gem 'dotenv-rails', groups: [:development, :test]
 

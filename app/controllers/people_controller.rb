@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
 
-    render :json => @people.as_json(methods: [:phones_number])
+    render :json => @people.as_json(methods: [:city_name, :case_name])
   end
 
   # GET /people/1
@@ -46,6 +46,6 @@ class PeopleController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def person_params
-      params.require(:person).permit(:cpf, :name, :gender, :birthdate, :city_id, :case_id)
+      params.require(:person).permit(:cpf, :name, :gender, :birthdate, :city_id, :case_id, :race)
     end
 end

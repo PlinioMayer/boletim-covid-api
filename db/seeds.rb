@@ -329,30 +329,35 @@ Case.create([
 
 HealthCenter.create([
   {
+    name: 'Posto 1',
     total: 150,
     occupied: 30,
     address: 'SHCN, Asa Norte',
     city_id: 27
   },
   {
+    name: 'Posto 3',
     total: 250,
     occupied: 70,
     address: 'Riacho Fundo, QN 01, Conj 32',
     city_id: 27
   },
   {
+    name: 'Posto 7',
     total: 220,
     occupied: 40,
     address: 'SHCL, Conj E, Lote 5, Asa Sul',
     city_id: 27
   },
   {
+    name: 'Posto 4',
     total: 170,
     occupied: 80,
     address: 'Vila Planalto Acamp Pacheco Fernandes',
     city_id: 27
   },
   {
+    name: 'Posto 5',
     total: 210,
     occupied: 80,
     address: 'SGAS II',

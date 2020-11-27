@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_005128) do
+ActiveRecord::Schema.define(version: 2020_11_27_011349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_005128) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "city_id", null: false
+    t.string "name"
     t.index ["city_id"], name: "index_health_centers_on_city_id"
   end
 
@@ -135,4 +136,28 @@ ActiveRecord::Schema.define(version: 2020_11_26_005128) do
   add_foreign_key "people_risk_groups", "risk_groups"
   add_foreign_key "phones", "people"
   add_foreign_key "tests", "people"
+
+  create_view "states_bulletins", sql_definition: <<-SQL
+      SELECT states.name,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE (people.city_id = cities.id)) AS confirmed,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE ((people.city_id = cities.id) AND (people.case_id = 1))) AS recovered,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE ((people.city_id = cities.id) AND (people.case_id = 3))) AS active,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE ((people.city_id = cities.id) AND (people.case_id = 2))) AS death,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE ((people.city_id = cities.id) AND ((people.gender)::text = 'Masculino'::text))) AS men_cases,
+      ( SELECT count(*) AS count
+             FROM people
+            WHERE ((people.city_id = cities.id) AND ((people.gender)::text = 'Feminino'::text))) AS women_cases
+     FROM (states
+       JOIN cities ON ((cities.state_id = states.id)));
+  SQL
 end
