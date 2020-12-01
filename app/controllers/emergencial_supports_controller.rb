@@ -5,7 +5,7 @@ class EmergencialSupportsController < ApplicationController
   def index
     @emergencial_supports = EmergencialSupport.all
 
-    render json: @emergencial_supports
+    render json: @emergencial_supports.as_json(methods: [:person_name])
   end
 
   # GET /emergencial_supports/1

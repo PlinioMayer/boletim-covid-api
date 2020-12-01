@@ -1,12 +1,12 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the rails db:seed command (or create!d alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 
-State.create([
+State.create!([
   {
     name: 'Acre',
     population: 773559,
@@ -144,7 +144,7 @@ State.create([
   }
 ])
 
-City.create([
+City.create!([
   {
     name: 'Rio Branco',
     population: 413418,
@@ -282,7 +282,7 @@ City.create([
   }
 ])
 
-RiskGroup.create([
+RiskGroup.create!([
   {
     name: 'Idoso',
   },
@@ -315,7 +315,7 @@ RiskGroup.create([
   }
 ])
 
-Case.create([
+Case.create!([
   {
     name: 'Recuperado'
   },
@@ -327,7 +327,7 @@ Case.create([
   }
 ])
 
-HealthCenter.create([
+HealthCenter.create!([
   {
     name: 'Posto 1',
     total: 150,
@@ -365,7 +365,7 @@ HealthCenter.create([
   },
 ])
 
-Person.create([
+Person.create!([
   {
     cpf: "6185391017",
     name: "Jose Costa",
@@ -449,7 +449,7 @@ Person.create([
   }
 ])
 
-PeopleRiskGroup.create([
+PeopleRiskGroup.create!([
   {
     person_id: 3,
     risk_group_id: 3
@@ -476,7 +476,7 @@ PeopleRiskGroup.create([
   },
 ])
 
-Bed.create([
+Bed.create!([
   {
     person_id: 3,
     health_center_id: 1
@@ -499,7 +499,7 @@ Bed.create([
   }
 ])
 
-Doctor.create([
+Doctor.create!([
   {
     registration: "1234",
     name: "Antonio Garcia",
@@ -537,7 +537,7 @@ Doctor.create([
   },
 ])
 
-EmergencialSupport.create([
+EmergencialSupport.create!([
   {
     value: 600,
     date: "2020-05-10",
@@ -565,7 +565,7 @@ EmergencialSupport.create([
   },
 ])
 
-Phone.create([
+Phone.create!([
   {
     number: "98982303109",
     person_id: 1
@@ -588,7 +588,7 @@ Phone.create([
   },
 ])
 
-Test.create([
+Test.create!([
   {
     result: 0,
     testtype:"RT-PCR",

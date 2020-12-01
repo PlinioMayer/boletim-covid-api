@@ -5,7 +5,7 @@ class PeopleRiskGroupsController < ApplicationController
   def index
     @people_risk_groups = PeopleRiskGroup.all
 
-    render json: @people_risk_groups
+    render json: @people_risk_groups.as_json(methods: [:person_name, :risk_group_name])
   end
 
   # GET /people_risk_groups/1
