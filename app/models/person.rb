@@ -2,6 +2,11 @@ class Person < ApplicationRecord
   belongs_to :city
   belongs_to :case
   has_many :phones, dependent: :destroy
+  has_many :people_risk_groups
+  has_many :risk_groups, through: :people_risk_groups, dependent: :destroy
+  has_many :tests, dependent: :destroy
+  has_one :bed, dependent: :destroy
+  has_many :emergencial_supports, dependent: :destroy
 
   def phones_number
     numbers = []

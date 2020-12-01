@@ -1,6 +1,6 @@
 class HealthCenter < ApplicationRecord
-  has_many :beds
-  has_many :doctors
+  has_many :beds, dependent: :destroy
+  has_many :doctors, dependent: :destroy
   belongs_to :city
 
   def city_name

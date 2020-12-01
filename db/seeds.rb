@@ -10,67 +10,67 @@ State.create([
   {
     name: 'Acre',
     population: 773559,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Alagoas',
     population: 3351543,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Amapá',
     population: 669526,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Amazonas',
     population: 4207714,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Bahia',
     population: 14016906,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Ceará',
     population: 8452381,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Espírito Santo',
     population: 3514952,
-    region: 'SUDESTE'
+    region: 'Sudeste'
   },
   {
     name: 'Goiás',
     population: 6003788,
-    region: 'CENTRO_OESTE'
+    region: 'Centro Oeste'
   },
   {
     name: 'Maranhão',
     population: 6574789,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Mato Grosso',
     population: 3035122,
-    region: 'CENTRO_OESTE'
+    region: 'Centro Oeste'
   },
   {
     name: 'Mato Grosso do Sul',
     population: 2449024,
-    region: 'CENTRO_OESTE'
+    region: 'Centro Oeste'
   },
   {
     name: 'Minas Gerais',
     population: 19597330,
-    region: 'SUDESTE'
+    region: 'Sudeste'
   },
   {
     name: 'Pernambuco',
     population: 8796448,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Paraná',
@@ -80,27 +80,27 @@ State.create([
   {
     name: 'Paraíba',
     population: 3766528,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Pará',
     population: 7581051,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Piauí',
     population: 3118360,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Rio de Janeiro',
     population: 15989929,
-    region: 'dSUDESTE'
+    region: 'dSudeste'
   },
   {
     name: 'Rio Grande do Norte',
     population: 3168027,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Rio Grande do Sul',
@@ -110,12 +110,12 @@ State.create([
   {
     name: 'Rondônia',
     population: 1562409,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Roraima',
     population: 450479,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Santa Catarina',
@@ -130,17 +130,17 @@ State.create([
   {
     name: 'Sergipe',
     population: 2068017,
-    region: 'NORDESTE'
+    region: 'Nordeste'
   },
   {
     name: 'Tocantins',
     population: 1590248,
-    region: 'NORTE'
+    region: 'Norte'
   },
   {
     name: 'Distrito Federal',
     population: 2570160,
-    region: 'CENTRO_OESTE'
+    region: 'Centro Oeste'
   }
 ])
 
@@ -284,34 +284,34 @@ City.create([
 
 RiskGroup.create([
   {
-    name: 'IDOSO',
+    name: 'Idoso',
   },
   {
-    name: 'CARDIACO'
+    name: 'Cardíaco'
   },
   {
-    name: 'DOENTE_PULMONAR'
+    name: 'Doente Pulmonar'
   },
   {
-    name: 'TABAGISTA'
+    name: 'Tabagista'
   },
   {
-    name: 'DIABETICO'
+    name: 'Diabético'
   },
   {
-    name: 'IMUNODEPRESSIVO'
+    name: 'Imunodepressivo'
   },
   {
-    name: 'DOENTE_RENAL'
+    name: 'Doente Renal'
   },
   {
-    name: 'DOENTE_HEPATICO'
+    name: 'Doente Hepático'
   },
   {
-    name: 'DOENTE_NEURODEGENRATIVO'
+    name: 'Doente Neurodegenerativo'
   },
   {
-    name: 'TRABALHADOR_DA_SAUDE'
+    name: 'Trabalhador da Saúde'
   }
 ])
 
