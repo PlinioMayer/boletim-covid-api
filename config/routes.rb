@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :cities
   resources :states
   get 'states_bulletins', to: 'states_bulletins#index'
+  post 'create_people_with_procedure', to: 'people#create_with_procedure'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
