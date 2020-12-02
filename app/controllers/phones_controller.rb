@@ -5,7 +5,7 @@ class PhonesController < ApplicationController
   def index
     @phones = Phone.all
 
-    render json: @phones
+    render json: @phones.as_json(methods: [:person_name])
   end
 
   # GET /phones/1
